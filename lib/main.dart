@@ -3,6 +3,7 @@ import 'furniture_item.dart';
 import 'furniture_row.dart';
 import 'home_banner.dart';
 import 'about_screen.dart';
+import 'contact_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -48,7 +49,7 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   int currentTab = 0; // 0 = Home, 1 = About
 
-  final List<Widget> pages = const [HomeScreen(), AboutScreen()];
+  final List<Widget> pages = const [HomeScreen(), AboutScreen(), ContactScreen()];
 
   @override
   Widget build(BuildContext context) {
@@ -64,6 +65,7 @@ class _MainScreenState extends State<MainScreen> {
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.info), label: 'About'),
+          BottomNavigationBarItem(icon: Icon(Icons.contact_phone), label: 'Contact'),
         ],
       ),
     );

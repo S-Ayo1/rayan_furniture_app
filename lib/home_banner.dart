@@ -41,16 +41,22 @@ class _HomeBannerState extends State<HomeBanner> {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 250,
-      child: AnimatedSwitcher(
-        duration: const Duration(milliseconds: 800), // fade time
-        child: Image.asset(
-          bannerImages[currentPage],
-          repeat: ImageRepeat.repeat,
-          key: ValueKey(currentPage), // lets Flutter know the picture changed
-          fit: BoxFit.contain,
-          width: double.infinity,
+    return Padding(
+      padding: const EdgeInsets.all(16),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(12),
+        child: SizedBox(
+          height: 280,
+          child: AnimatedSwitcher(
+            duration: const Duration(milliseconds: 800),
+            child: Image.asset(
+              bannerImages[currentPage],
+              repeat: ImageRepeat.repeat,
+              key: ValueKey(currentPage), // lets Flutter know the picture changed
+              fit: BoxFit.contain,
+              width: double.infinity,
+            ),
+          ),
         ),
       ),
     );

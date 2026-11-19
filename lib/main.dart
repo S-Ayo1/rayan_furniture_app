@@ -14,7 +14,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: MainScreen());
+    return MaterialApp(
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.brown),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.brown,
+          foregroundColor: Colors.white,
+        ),
+      ),
+      home: const MainScreen(),
+    );
   }
 }
 
@@ -25,7 +34,14 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Image.asset('assets/images/logo.png', height: 42),
+        title: Container(
+          padding: const EdgeInsets.all(1),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Image.asset('assets/images/logo.png', height: 32, width: 38),
+        ),
       ),
       body: ListView(
         children: [

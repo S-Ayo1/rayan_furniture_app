@@ -21,9 +21,10 @@ class FurnitureRow extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 220,
+          height: 250,
           child: ListView(
             scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.only(right: 16),
             children: [
               for (var item in items)
                 GestureDetector(
@@ -36,19 +37,23 @@ class FurnitureRow extends StatelessWidget {
                     );
                   },
                   child: Container(
-                    width: 150,
+                    width: 220,
                     margin: const EdgeInsets.only(left: 16),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Image.asset(
-                          item.images[0],
-                          height: 140,
-                          width: 150,
-                          fit: BoxFit.cover,
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(12),
+                          child: Image.asset(
+                            item.images[0],
+                            height: 200,
+                            width: 200,
+                            fit: BoxFit.cover,
+                          ),
                         ),
-                        Text(item.title),
-                        Text('₦${item.price}'),
+                        const SizedBox(height: 6),
+                        Text(item.title, style: const TextStyle(fontWeight: FontWeight.bold)),
+                        Text('₦${item.price}', style: const TextStyle(color: Colors.brown)),
                       ],
                     ),
                   ),

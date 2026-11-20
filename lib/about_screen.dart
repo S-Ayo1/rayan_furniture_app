@@ -64,7 +64,13 @@ class AboutScreen extends StatelessWidget {
           child: ListView(
             padding: const EdgeInsets.all(16),
             children: [
-              const Text('About Rayan Furniture', style: sectionStyle),
+              const Text(
+                "We design elegant, functional furniture and bespoke interior "
+                "for residential and commercial spaces.\n\n"
+                "Send us a DM, let's bring your vision to life.",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 16, height: 1.5),
+              ),
               const SizedBox(height: 24),
               const Text('Behind the scenes', style: sectionStyle),
               const SizedBox(height: 8),

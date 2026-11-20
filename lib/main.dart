@@ -4,6 +4,7 @@ import 'furniture_row.dart';
 import 'home_banner.dart';
 import 'about_screen.dart';
 import 'contact_screen.dart';
+import 'maintenance_row.dart';
 
 void main() {
   runApp(const MyApp());
@@ -48,7 +49,7 @@ class HomeScreen extends StatelessWidget {
           const HomeBanner(),
           FurnitureRow(title: 'Trending', items: furnitureList),
           FurnitureRow(title: 'Top Rated', items: sofaList),
-          FurnitureRow(title: 'Maintenance', items: furnitureList),
+          const MaintenanceRow(),
         ],
       ),
     );

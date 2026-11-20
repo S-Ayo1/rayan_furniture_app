@@ -31,7 +31,10 @@ List<FurnitureItem> furnitureList = [
     colour: 'Brown',
     images: [
       'assets/images/sofa1.jpg.webp',
-      'assets/images/sofa2.jpg.webp'
+      'assets/images/sofa2.jpg.webp',
+      'assets/images/sofa3.jpg.webp',
+      'assets/images/sofa4.jpg.webp',
+      'assets/images/sofa5.jpg.webp',
     ],
   ),
   FurnitureItem(
@@ -44,6 +47,21 @@ List<FurnitureItem> furnitureList = [
     colour: 'Black',
     images: ['assets/images/table1.webp'],
   ),
+  FurnitureItem(
+    id: 3,
+    title: 'Exotic white sofa',
+    description: 'An elegant 3-seater sofa.',
+    price: 180000,
+    material: 'Wood',
+    size: '180 x 90 cm',
+    colour: 'Black',
+    images: [
+      'assets/images/whitesof1.jpg.webp',
+      'assets/images/whitesof2.jpg.webp',
+      'assets/images/whitesof3.jpg.webp',
+      'assets/images/whitesof4.jpg.webp',
+      ],
+  ),
 ];
 
 List<FurnitureItem> sofaList = [
@@ -55,7 +73,7 @@ List<FurnitureItem> sofaList = [
     material: 'Leather',
     size: '200 x 90 cm',
     colour: 'Brown',
-    images: ['assets/images/sofa2.jpg.webp'],
+    images: ['assets/images/sofaa2.jpg.webp'],
   ),
   FurnitureItem(
     id: 2,
@@ -66,5 +84,20 @@ List<FurnitureItem> sofaList = [
     size: '180 x 90 cm',
     colour: 'Black',
     images: ['assets/images/dining1.jpg.webp'],
+  ),
+  FurnitureItem(
+    id: 3,
+    title: 'Luxurious elegant sofa',
+    description: 'A strong 6-seater dining table.',
+    price: 180000,
+    material: 'Wood',
+    size: '180 x 90 cm',
+    colour: 'Black',
+    images: [
+      'assets/images/orange1.jpg.webp',
+      'assets/images/orange2.jpg.webp',
+      'assets/images/orange3.jpg.webp',
+      'assets/images/orange4.jpg.webp',
+      ],
   ),
 ];

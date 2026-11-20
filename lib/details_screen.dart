@@ -19,7 +19,16 @@ class _DetailsScreenState extends State<DetailsScreen> {
     final item = widget.item;
 
     return Scaffold(
-      appBar: AppBar(title: Text(item.title)),
+      appBar: AppBar(
+        title: Container(
+          padding: const EdgeInsets.all(1),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Image.asset('assets/images/logo.png', height: 32, width: 38),
+        ),
+      ),
       body: ListView(
         children: [
           Image.asset(
